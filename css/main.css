@@ -1,0 +1,97 @@
+/* reset */
+html{
+    font-size: 62.5%;
+}
+body{
+    font: 1.6rem sans-serif;
+    margin: 0;
+}
+h1,h2,h3,h4,ul,p,ol,figure{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+*{
+    box-sizing: border-box;
+}
+input[type="submit"], button, select{
+    background-color: transparent;
+    border: 0;
+}
+input{
+    border: 0;
+}
+/* theme */
+header h1{
+    line-height: 6.5rem;
+    text-align: center;
+    background-color: #1c5882;
+    color: #fff;
+    font-family: 'outrun_futureregular';
+    padding: 1rem;
+}
+fieldset{
+    max-width: 80rem;
+    margin: 5.0rem auto;
+    padding: 1rem;
+    border-radius: .4rem;
+    border: solid .1rem #1c5882;
+    
+}
+fieldset legend{
+    font-size: 2rem;
+    padding: .5rem;
+    font-family: 'outrun_futureregular';
+}
+
+form *{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .9rem;
+}
+form input, form select{
+    border: solid .1rem #ccc;
+    line-height: 3.5rem;
+    transition: all 0.8s ease-in-out;
+   
+}
+form input[type="text"]:focus, form input[type="date"]:focus{
+    outline: none;
+    box-shadow: 0 0 1.0rem #1c5882;
+}
+[placeholder]{
+    text-transform: uppercase;
+}
+form .select-pays{
+    padding: 0;
+}
+form input[type="submit"]{
+    background-color: #1c5882;
+    line-height: 3.5rem;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: .4rem;
+    margin: 0;
+    cursor: pointer;
+}
+form select{
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
+}
+footer{
+    text-align: center;
+}
+section{
+    max-width: 80rem;
+    margin: 2rem auto;
+}
+section .success, section .warning{
+    background-color: rgb(12, 136, 23);
+    color: #fff;
+    padding: 1rem;
+    line-height: 2.5rem;
+}
+section .warning{
+    background-color: rgb(161, 7, 33);
+}

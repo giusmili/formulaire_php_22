@@ -2,7 +2,7 @@
 ![image](./asset/a.png)
 
 # Formulaire d'inscription
-Quelque notion de contrôle formulaire en PHP
+Quelque notion de contrôle formulaire en PHP : traitement des champs
 ```php
 if(isset($_POST["numero_de_serie"]) || isset($_POST["date"]) || isset($_POST["pays"])){
             //variables => GET

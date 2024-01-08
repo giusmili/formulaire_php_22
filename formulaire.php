@@ -30,7 +30,7 @@
     </header>
     <main>
         <?php
-            include_once "./src/form.inc.php";
+            include_once __DIR__."/src/form.inc.php";
             
         ?>
         <pre>

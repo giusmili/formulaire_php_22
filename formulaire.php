@@ -3,6 +3,7 @@
 session_start();
 $_SESSION["user"] = "Inscription";
 $_id_session = session_id();
+$_COOKIE['PHPSESSID'] = null;
 
 # class pour le formulaire
     class Form{
@@ -34,6 +35,7 @@ $_id_session = session_id();
     <header>
         <h1><?= $_form->title  ?></h1>
     </header>
+    <?= $_COOKIE['PHPSESSID']; ?>
     <main>
         <?php
             include_once __DIR__."/src/form.inc.php";

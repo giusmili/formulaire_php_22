@@ -54,7 +54,7 @@ $_COOKIE['PHPSESSID'] = null;
     </main>
     <footer>
         <?php
-            print "<strong>&copy; - Under - ".$_date->format("Y")."</strong>";
+            print "<strong>&copy; - PHP - ".$_date->format("Y")."</strong>";
         ?>
     </footer>
     <?php

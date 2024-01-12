@@ -9,8 +9,11 @@
                     $_number = $_POST["numero_de_serie"];
                     $_date = $_POST["date"];
                     $_pays = $_POST["pays"];
+                    $_SESSION['number'] = $_number;
+         
+                    
                     //ternaire
-                    $_number &&  $_date && $_pays ? print '<p class="success">Numéro de série : '.$_number."<br>date : ".$_date."<br>Pays : ".$_pays."</p>" 
+                    strip_tags (is_numeric($_number)) &&  $_date && $_pays ? print '<p class="success">Numéro de série : '.$_SESSION['number']."<br>date : ".$_date."<br>Pays : ".$_pays."</p>" 
                                                     
                     :print '<p class="warning">Les champs sont tous obligatoires</p>';
         
@@ -21,10 +24,10 @@
     ?>
 </section>
     <fieldset>
-            <legend>inscription</legend>
+            <legend><?= $_SESSION["user"] ?></legend>
             <form action="<?php urlencode($_SERVER['PHP_SELF']) ?>" method="post">
                 <label for="numero">Numéro de serie</label>
-                <input type="text" id="numero" name="numero_de_serie" placeholder="Numéro de serie" aria-required="true" autofocus>
+                <input type="number" id="numero" name="numero_de_serie" placeholder="Numéro de serie" aria-required="true" autofocus>
                 <label for="date">Votre anniversaire</label>
                 <input type="date" id="date" name="date" aria-required="true">
                 <label for="pays">Lieu de naissance</label>

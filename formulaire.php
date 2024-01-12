@@ -1,13 +1,19 @@
 <?php
+# session
+session_start();
+$_SESSION["user"] = "Inscription";
+$_id_session = session_id();
+
+# class pour le formulaire
     class Form{
         public string $title = "Formulaire d'inscription";
         public string $lang = "fr";
         public string $css = "./css/main.css";
         
     }
-    $_form = new Form; //little class PHP
+    $_form = new Form; 
 
-    $_copy = date("d-m-Y : H - i");
+    $_date = new DateTime();
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +38,7 @@
         <?php
             include_once __DIR__."/src/form.inc.php";
             
+            
         ?>
         <pre>
             <?php
@@ -45,12 +52,17 @@
     </main>
     <footer>
         <?php
-            print "<strong>&copy; - Under - ".$_copy."</strong>";
+            print "<strong>&copy; - Under - ".$_date->format("Y")."</strong>";
         ?>
     </footer>
     <?php
         //include_once "./src/tab_php.inc.php";
     ?>
+    <pre>
+<?php
+    session_destroy();
+?>
+    
  
 </body>
 </html>

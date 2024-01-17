@@ -5,6 +5,14 @@ $_SESSION["user"] = "Inscription";
 $_id_session = session_id();
 $_COOKIE['PHPSESSID'] = null;
 
+# compter les visiteur
+
+if (empty($_SESSION['count'])) {
+    $_SESSION['count'] = 1;
+ } else {
+    $_SESSION['count']++;
+ }
+
 # class pour le formulaire
     class Form{
         public string $title = "Formulaire d'inscription";
@@ -33,7 +41,7 @@ $_COOKIE['PHPSESSID'] = null;
 </head>
 <body>
     <header>
-        <h1><?= $_form->title  ?></h1>
+        <h1><?= $_form->title." ".$_SESSION['count'] ?></h1>
     </header>
     <?= $_COOKIE['PHPSESSID']; ?>
     <main>

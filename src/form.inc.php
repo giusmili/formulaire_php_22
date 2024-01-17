@@ -1,18 +1,15 @@
 <section>
     <?php
   
-        // creer une méthode de contrôle du formulaire
+        # creer une méthode de contrôle du formulaire
         class User{
             static function userform(){
                 if(isset($_POST["numero_de_serie"]) || isset($_POST["date"]) || isset($_POST["pays"])){
-                    //variables => GET
-                    $_number = $_POST["numero_de_serie"];
-                    $_date = $_POST["date"];
-                    $_pays = $_POST["pays"];
-                    $_SESSION['number'] = $_number;
-         
+                    # variables => GET
                     
-                    //ternaire
+                    require_once __DIR__.'/config.inc.php';
+                    
+                    # ternaire
                     strip_tags (is_numeric($_number)) &&  $_date && $_pays ? print '<p class="success">Numéro de série : '.$_SESSION['number']."<br>date : ".$_date."<br>Pays : ".$_pays."</p>" 
                                                     
                     :print '<p class="warning">Les champs sont tous obligatoires</p>';

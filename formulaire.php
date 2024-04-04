@@ -9,7 +9,9 @@ $_COOKIE['PHPSESSID'] = null;
 
 if (empty($_SESSION['count'])) {
     $_SESSION['count'] = 1;
- } else {
+ } 
+ else 
+ {
     $_SESSION['count']++;
  }
 

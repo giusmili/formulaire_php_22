@@ -10,6 +10,7 @@
                     require_once __DIR__.'/config.inc.php';
                     
                     # ternaire
+                    # header("Location: http://www.example.com/");
                     strip_tags (is_numeric($_number)) &&  $_date && $_pays ? print '<p class="success">Numéro de série : '.$_SESSION['number']."<br>date : ".$_date."<br>Pays : ".$_pays."</p>" 
                                                     
                     :print '<p class="warning">Les champs sont tous obligatoires</p>';
